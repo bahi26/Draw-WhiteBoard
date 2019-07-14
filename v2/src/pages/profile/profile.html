@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+    <ion-card>
+
+        <img src="http://193.227.9.124:37225/users/{{userid}}.jpg"/>
+
+        <ion-card-content>
+            <ion-card-title>
+               {{username}}
+            </ion-card-title>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            Joined Rooms
+        </ion-card-header>
+        <ion-card-content>
+
+        </ion-card-content>
+            <ion-list>
+
+      <button ion-item  *ngFor="let x of rooms_list" >
+        <ion-icon name='ios-create' item-start></ion-icon>
+        <h2 color="primary">{{x.name}}</h2>
+
+      </button>
+
+    </ion-list>
+    </ion-card>
+
+</ion-content>
+

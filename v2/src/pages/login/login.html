@@ -1,0 +1,33 @@
+<header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+</header>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-list>
+
+      <ion-item> 
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text"  #user></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password"  #pass></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button (click)='logging(user.value,pass.value)' color="primary" block>Sign In</button>
+       <button ion-button (click)='Register()' color="primary" block>Sign Up</button>
+    </div>
+<img src="../../img/test.jpg"/>
+</ion-content>

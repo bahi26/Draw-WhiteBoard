@@ -1,0 +1,43 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"   #user></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"   #pass></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Image</ion-label>
+      <ion-input type="file" accept='image/*'  #img (change)="onFileChanged($event)"></ion-input>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-option value="0"  >Student</ion-option>
+        <ion-option value="1">Instructor</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <div padding>
+    <button ion-button (click)='Register(user.value,pass.value,img.value)' color="primary" block>Sign Up</button>
+  </div>
+
+</ion-content>

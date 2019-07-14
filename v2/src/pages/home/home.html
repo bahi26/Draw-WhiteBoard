@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-item *ngIf="hide" >
+    <ion-label floating>Add New Room</ion-label>
+    <ion-input type="text"  #Room></ion-input>
+  <button clear item-right *ngIf="hide" (click)="addNewRoom(Room.value)">
+        <ion-icon name='add-circle' item-start></ion-icon>
+      </button>
+      </ion-item>
+  <div style="display:flex">
+    <ion-input type="text"  #search placeholder='Search for a Room'></ion-input>
+    <button (click)="Search(search.value)" ion-button color="primary" clear>Search</button>
+  </div>
+  <ion-card >
+    <ion-card-header>
+      Available Rooms
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item *ngFor="let x of rooms;let i=index" (click)='room(x.room_key)'>
+      <button  >  <ion-icon name='ios-create' item-start></ion-icon>
+       {{x.room_name}}
+      </button>
+      </ion-item>
+
+
+
+
+    </ion-list>
+  </ion-card>
+
+
+
+  <img src="../../img/home.jpg"/>
+
+</ion-content>
